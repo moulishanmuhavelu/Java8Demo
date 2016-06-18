@@ -5,13 +5,13 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-public class Test {
+public class Sorter {
 
 	private static List<Employee> employees = new ArrayList<Employee>(); 
 
 	public static void main(String[] args) {
 		buildEmployees();
-		sortEmployeesJava7();
+//		sortEmployeesJava7();
 		sortEmployeesJava8();
 		printEmployees();
 		
@@ -19,7 +19,7 @@ public class Test {
 	
 	private static void sortEmployeesJava7() {
 		
-		Collections.sort(employees, new Comparator() {
+/*		Collections.sort(employees, new Comparator() {
 
 			@Override
 			public int compare(Object e1, Object e2) {
@@ -29,7 +29,7 @@ public class Test {
 			}
 		
 		});		
-	}
+*/	}
 	private static void sortEmployeesJava8() {
 		
 		Collections.sort(employees, (Employee e1, Employee e2) -> e1.getEmpId() > e2.getEmpId() ? 1 : -1 );		
